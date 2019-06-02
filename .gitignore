@@ -2,7 +2,8 @@
 
 /dist/
 e2e_test.*
-node_modules/git rm -r --cached .
+node_modules
+node_modules/
 tools/gulp-tasks/cldr/cldr-data/
 
 # Include when developing application packages.
@@ -22,7 +23,7 @@ modules/.vscode
 # Don't check in secret files
 *secret.js
 
-# Ignore npm/yarn debug log
+# Ignore npm/yarn debug loggu
 npm-debug.log
 yarn-error.log
 
