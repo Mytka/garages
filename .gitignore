@@ -2,7 +2,7 @@
 
 /dist/
 e2e_test.*
-node_modules
+node_modules/git rm -r --cached .
 tools/gulp-tasks/cldr/cldr-data/
 
 # Include when developing application packages.
