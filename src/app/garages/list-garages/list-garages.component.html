@@ -1,0 +1,20 @@
+<h1 class="all-garage"> The garages of Amsterdam</h1>
+<div class="container">
+    <mat-list>
+        <mat-list-item class="garage-block" *ngFor="let garage of garages">
+            <h2 class="garage-title" matLine>
+             <span class="current-dot"
+                   [ngStyle]="{'backgroundColor': garage.freeSpaceShort == 0 ? 'red' : 'green'}">
+            </span>
+                <a class="garage-title" [routerLink]="['/garage', garage.id]">{{garage.title}}</a>
+            </h2>
+
+            <p class="garage-place" matLine> Free: <span>{{garage.freeSpaceShort}}</span></p>
+            <p class="garage-place_orange" matLine> Total: <span>{{garage.shortCapacity}}</span></p>
+            <div>
+                <a mat-raised-button class="button-view" matLine [routerLink]="['/garage', garage.id]">View details</a>
+            </div>
+        </mat-list-item>
+    </mat-list>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+</div>

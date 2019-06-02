@@ -1,0 +1,13 @@
+<div class="container">
+<button mat-raised-button class="button-back" (click)="backClicked()">View all garages</button>
+<div *ngIf="garage">
+    <h2 class="garage-title">The garage: <span>{{garage.title}}</span></h2>
+    <p class="garage-total">Total: {{garage.shortCapacity}}</p>
+    <p class="garage-free">Free: {{garage.freeSpaceShort}}</p>
+    <agm-map [latitude]="garage.coordinates.lat" [longitude]="garage.coordinates.lng" [zoom]="zoom">
+        <agm-marker [latitude]="garage.coordinates.lat" [longitude]="garage.coordinates.lng"></agm-marker>
+    </agm-map>
+</div>
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+</div>
